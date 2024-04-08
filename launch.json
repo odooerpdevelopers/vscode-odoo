@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo dev",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./odoo/odoo-bin",
+            "console": "integratedTerminal",
+            "args": [
+                "--config=./config/odoo.conf",
+                "--dev=all",
+                "--database=database_name",
+            ],
+        },
+        {
+            "name": "Odoo Update",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./odoo/odoo-bin",
+            "console": "integratedTerminal",
+            "args": [
+                "--config=./config/odoo.conf",
+                "--update=your_module_name",
+                "--database=database_name",
+            ],
+        },
+    ]
+}
