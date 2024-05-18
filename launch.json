@@ -2,15 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Odoo dev",
+            "name": "Odoo 17",
             "type": "debugpy",
             "request": "launch",
             "program": "./odoo/odoo-bin",
             "console": "integratedTerminal",
             "args": [
-                "--config=./config/odoo.conf",
-                "--dev=all",
-                "--database=database_name",
+                "--config=./config/odoo17.conf",
+            ],
+        },
+        {
+            "name": "Odoo Dev",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./odoo/odoo-bin",
+            "console": "integratedTerminal",
+            "args": [
+                "--config=./config/odoo17.conf",
+                "--dev=qweb,xml",
+                "--database=odoo17ee",
+                //"--i18n-overwrite",
             ],
         },
         {
@@ -20,9 +31,11 @@
             "program": "./odoo/odoo-bin",
             "console": "integratedTerminal",
             "args": [
-                "--config=./config/odoo.conf",
-                "--update=your_module_name",
-                "--database=database_name",
+                "--config=./config/odoo17.conf",
+                "--update=library",
+                "--database=odoo17ee",
+                //"--test-enable",
+                //"--i18n-overwrite",
             ],
         },
     ]
